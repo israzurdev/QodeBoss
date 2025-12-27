@@ -58,40 +58,38 @@ Cada usuario inicia sesión de forma segura, recibe un número limitado de pregu
 ## 📂 Estructura del proyecto
 
 QodeBoss/
-backend/
-server.py
-src/
-app.py
-ai_generator.py
-routes/
-challenge.py
-webhooks.py
-database/
-models.py
-db.py
-utils/
-...
-frontend/
-index.html
-vite.config.js
-src/
-App.jsx
-App.css
-layout/
-Layout.jsx
-Layout.css
-challenge/
-ChallengeGenerator.jsx
-MCQChallenge.jsx
-ChallengeGenerator.css
-MCQChallenge.css
-history/
-HistoryPanel.jsx
-auth/
-ClerkProviderWithRoutes.jsx
-AuthenticationPage.jsx
-
-text
+├── backend/
+│ ├── server.py
+│ └── src/
+│ ├── app.py
+│ ├── ai_generator.py
+│ ├── routes/
+│ │ ├── challenge.py
+│ │ └── webhooks.py
+│ ├── database/
+│ │ ├── models.py
+│ │ └── db.py
+│ └── utils/
+│ └── ... (helpers varios)
+└── frontend/
+├── index.html
+├── vite.config.js
+└── src/
+├── App.jsx
+├── App.css
+├── layout/
+│ ├── Layout.jsx
+│ └── Layout.css
+├── challenge/
+│ ├── ChallengeGenerator.jsx
+│ ├── MCQChallenge.jsx
+│ ├── ChallengeGenerator.css
+│ └── MCQChallenge.css
+├── history/
+│ └── HistoryPanel.jsx
+└── auth/
+├── ClerkProviderWithRoutes.jsx
+└── AuthenticationPage.jsx
 
 ---
 
@@ -112,7 +110,7 @@ text
 git clone https://github.com/misk0zz/QodeBoss.git
 cd QodeBoss
 
-text
+
 
 ---
 
@@ -129,7 +127,7 @@ text
 pip install uv
 uv sync
 
-text
+
 
 > Si prefieres `pip`, instala las dependencias que estén en `pyproject.toml` / `requirements.txt`.
 
@@ -138,13 +136,13 @@ text
 OPENAI_API_KEY=tu_clave_de_openai
 CLERK_SECRET_KEY=tu_clave_secreta_de_clerk
 
-text
+
 
 4. Lanzar el servidor:
 
 python -m uv run .\server.py
 
-text
+
 
 El backend arrancará en `http://localhost:8000`.
 
@@ -156,26 +154,26 @@ El backend arrancará en `http://localhost:8000`.
 
 cd ../frontend
 
-text
+
 
 2. Instalar dependencias:
 
 npm install
 
-text
+
 
 3. Crear archivo `.env` en `frontend` (si se usa Vite con variables de Clerk):
 
 VITE_CLERK_PUBLISHABLE_KEY=tu_publishable_key_de_clerk
 VITE_API_BASE_URL=http://localhost:8000/api
 
-text
+
 
 4. Arrancar el dev server:
 
 npm run dev
 
-text
+
 
 Vite te mostrará una URL como `http://localhost:5173/`.
 
@@ -224,13 +222,7 @@ Si quieres abrir issues, sugerir mejoras o enviar PRs:
 
 git checkout -b feature/nueva-funcionalidad
 
-text
 
 3. Haz commit y push de tus cambios.
 4. Abre un Pull Request describiendo qué has añadido o mejorado.
 
----
-
-## 📄 Licencia
-
-Puedes añadir aquí la licencia que prefieras (por ejemplo MIT) si decides hacer el proyecto open source.
