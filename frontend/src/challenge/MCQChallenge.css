@@ -1,0 +1,203 @@
+.mcq-card {
+    margin-top: 1.2rem;
+    padding: 1.5rem 1.6rem;
+    border-radius: 1.2rem;
+    background: rgba(15, 23, 42, 0.98);
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.9);
+  }
+  
+  .mcq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    color: #9ca3af;
+  }
+  
+  .mcq-difficulty {
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.78rem;
+  }
+  
+  .mcq-easy {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+  }
+  
+  .mcq-medium {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+  }
+  
+  .mcq-hard {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+  }
+  
+  .mcq-timestamp {
+    font-size: 0.78rem;
+    color: #6b7280;
+  }
+  
+  .mcq-title {
+    margin: 0 0 1.1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Opciones con más espacio */
+  
+  .mcq-options {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  
+  .mcq-option {
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(55, 65, 81, 0.9);
+    cursor: pointer;
+    background: rgba(15, 23, 42, 0.95);
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    transition: background 0.15s, border-color 0.15s, transform 0.06s;
+  }
+  
+  .mcq-option:hover {
+    background: rgba(31, 41, 55, 0.95);
+    transform: translateY(-1px);
+  }
+  
+  .mcq-option-selected {
+    border-color: #3b82f6;
+    background: rgba(37, 99, 235, 0.12);
+  }
+  
+  .mcq-option-correct {
+    border-color: #22c55e;
+    background: rgba(22, 163, 74, 0.15);
+  }
+  
+  .mcq-option-wrong {
+    border-color: #ef4444;
+    background: rgba(220, 38, 38, 0.16);
+  }
+  
+  /* Botón de comprobar */
+  
+  .mcq-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .mcq-submit-button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.55rem 1.2rem;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    font-weight: 500;
+    font-size: 0.86rem;
+    cursor: pointer;
+    box-shadow: 0 14px 35px rgba(22, 163, 74, 0.7);
+    transition: transform 0.06s, box-shadow 0.15s, filter 0.15s;
+  }
+  
+  .mcq-submit-button:hover:not(:disabled) {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+  }
+  
+  .mcq-submit-button:disabled {
+    opacity: 0.6;
+    cursor: default;
+    box-shadow: none;
+  }
+  
+  /* Explicación */
+  
+  .mcq-explanation {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(55, 65, 81, 0.9);
+    font-size: 0.86rem;
+    color: #d1d5db;
+  }
+  
+  .mcq-explanation p {
+    margin: 0.15rem 0;
+  }
+
+  .mcq-code-block {
+    margin-bottom: 1rem;
+    border-radius: 0.9rem;
+    background: radial-gradient(circle at top left, #020617, #020617);
+    border: 1px solid rgba(55, 65, 81, 0.9);
+    padding: 0.8rem 0.9rem;
+    overflow-x: auto;
+  }
+  
+  .mcq-code-block pre {
+    margin: 0;
+    font-family: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular,
+      Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #e5e7eb;
+    white-space: pre;
+  }
+  
+  .mcq-code-block code {
+    background: transparent;
+  }
+  
+  .history-layout {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .history-item {
+    border: 1px solid rgba(31, 41, 55, 0.85);
+    background: rgba(15, 23, 42, 0.98);
+    border-radius: 0.9rem;
+    padding: 0.8rem 0.9rem;
+    text-align: left;
+    cursor: pointer;
+    color: inherit;
+    display: block;
+    transition: background 0.15s, border-color 0.15s, transform 0.05s;
+  }
+  
+  .history-item:hover {
+    background: rgba(30, 64, 175, 0.15);
+    transform: translateY(-1px);
+  }
+  
+  .history-item-active {
+    border-color: #3b82f6;
+    background: rgba(37, 99, 235, 0.18);
+  }
+  
+  .history-detail {
+    min-height: 200px;
+  }
+  

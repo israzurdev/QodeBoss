@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 80" fill="none">
+  <defs>
+    <linearGradient id="bossGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB" />
+      <stop offset="100%" style="stop-color:#9333EA" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <path d="M30 2 C15 2 5 15 5 30 C5 50 20 65 30 70 C40 65 55 50 55 30 C55 15 45 2 30 2Z" fill="url(#bossGradient)"/>
+    <path d="M20 12 L25 20 L30 10 L35 20 L40 12 L40 22 H20 V12Z" fill="#F59E0B"/>
+    <path d="M18 35 L25 28 L25 31 L20 35 L25 39 L25 42 L18 35 Z" fill="white"/> <path d="M42 35 L35 28 L35 31 L40 35 L35 39 L35 42 L42 35 Z" fill="white"/> <path d="M32 28 L28 42" stroke="white" stroke-width="2" stroke-linecap="round"/> </g>
+
+  <text x="80" y="52" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="bold" fill="#1F2937">
+    Qode<tspan fill="#9333EA">Boss</tspan>
+  </text>
+</svg>
